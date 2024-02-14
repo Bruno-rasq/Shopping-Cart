@@ -1,6 +1,8 @@
 import './ProductCard.css';
 import { BsFillCartPlusFill } from 'react-icons/bs';
 import { formatCurrency } from '../../utils/formatCurrency';
+import { useContext } from 'react';
+import  AppContext from '../../context/AppContext';
 
 interface contentProps {
   data: {
@@ -13,6 +15,14 @@ interface contentProps {
 export function ProductCard({ data }: contentProps){
 
   const {title, thumbnail, price} = data;
+
+
+  const { setCartItems, cartItems } = useContext(AppContext) as { cartItems: any[], setCartItems: React.Dispatch<React.SetStateAction<any[]>> };
+
+
+  const handleAddCart = () => {
+    setCartItems([...cartItems, data]);
+  }
 
   let thumb = thumbnail.replace(/\w\.jpg/gi, "W.jpg")
   
@@ -36,7 +46,8 @@ export function ProductCard({ data }: contentProps){
         
       </div>
 
-      <button type="button" className="button__add-cart">
+      <button type="button" className="button__add-cart"
+        onClick={handleAddCart}>
         <BsFillCartPlusFill />
       </button>
     </section>
