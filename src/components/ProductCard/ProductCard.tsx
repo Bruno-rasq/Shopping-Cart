@@ -1,16 +1,14 @@
-import PropType from 'prop-types';
-
 import './ProductCard.css';
 import { BsFillCartPlusFill } from 'react-icons/bs';
 import { formatCurrency } from '../../utils/formatCurrency';
 
 interface contentProps {
   title: string;
-  price: string;
   thumbnail: string;
+  price: string;
 }
 
-export function ProductCard({ title, price, thumbnail }: contentProps){
+export function ProductCard({ title, thumbnail, price }: contentProps){
   
   return (
     <section className= "product-card">
