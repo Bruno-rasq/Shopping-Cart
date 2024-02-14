@@ -13,15 +13,17 @@ interface contentProps {
 export function ProductCard({ data }: contentProps){
 
   const {title, thumbnail, price} = data;
+
+  let thumb = thumbnail.replace(/\w\.jpg/gi, "W.jpg")
   
   return (
     <section className= "product-card">
 
-      <img 
-        src={thumbnail}
+      <img src={thumb}
         alt="product"
-        className="card__image"/>
-
+        className="card__image"
+      />
+      
       <div className="card__content">
 
         <h2 className="card__price">
