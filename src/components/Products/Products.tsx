@@ -21,7 +21,7 @@ export function Products(){
       container products">
 
       {
-        products.map((product) => <ProductCard title={product.title} thumbnail={product.thumbnail} price={product.price} key={product.id} />)
+        products.map((product) => <ProductCard data={product} key={product.id} />)
       }
       
     </section>

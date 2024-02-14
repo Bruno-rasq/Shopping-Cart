@@ -3,18 +3,22 @@ import { BsFillCartPlusFill } from 'react-icons/bs';
 import { formatCurrency } from '../../utils/formatCurrency';
 
 interface contentProps {
-  title: string;
-  thumbnail: string;
-  price: string;
+  data: {
+    title: string;
+    thumbnail: string;
+    price: number;
+  }
 }
 
-export function ProductCard({ title, thumbnail, price }: contentProps){
+export function ProductCard({ data }: contentProps){
+
+  const {title, thumbnail, price} = data;
   
   return (
     <section className= "product-card">
 
       <img 
-        src={thumbnail.replace(/\W\.jpg/gi, 'W.jpg')}
+        src={thumbnail}
         alt="product"
         className="card__image"/>
 
