@@ -11,7 +11,9 @@ export function Cart(){
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
   
   return (
-    <section className={`cart ${isCartVisible ? 'cart--active' : ''}`}>
+    <div>
+      <div className={isCartVisible ? 'cart-blur' : ''}/>
+      <section className={`cart ${isCartVisible ? 'cart--active' : ''}`}>
 
       <div className="cart-items">
 
@@ -23,5 +25,7 @@ export function Cart(){
         {formatCurrency(totalPrice, 'BRL')}
       </div>
     </section>
+    
+    </div>
   )
 }
