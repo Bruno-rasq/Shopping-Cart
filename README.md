@@ -1,5 +1,5 @@
 
-<img src="./public/screnshot.png"></img>
+<img src="./public/example.png"></img>
 
 
 # Shopping Cart
