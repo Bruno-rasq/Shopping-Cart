@@ -1,5 +1,10 @@
 import { createContext } from 'react';
 
-const AppContext = createContext();
+interface ContextType {
+  // Define your context type here
+}
+
+const AppContext = createContext<ContextType | undefined>(undefined);
+
 
 export default AppContext;
