@@ -4,14 +4,14 @@
 
 # Shopping Cart
 
+<a href="https://shopping-cart-eight-topaz.vercel.app/">Shoppin-cart</a>
+
 O projeto do carrinho de compras front-end utiliza React e TypeScript para criar uma interface de usuário interativa. Ele permite aos usuários adicionar produtos ao carrinho, ajustar quantidades e visualizar o total da compra. 
 
 O projeto utiliza a API do MercadoLivre:
 ```
 https://api.mercadolibre.com/sites/MLB/search?q=${query}
 ```
-
-
 
 ## Funcionalidades
 
@@ -23,7 +23,7 @@ https://api.mercadolibre.com/sites/MLB/search?q=${query}
 
 ## Licença
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[ISC](https://choosealicense.com/licenses/isc/)
 
 
 ## Referência
